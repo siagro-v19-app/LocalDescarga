@@ -1,0 +1,45 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:f="sap.ui.layout.form">
+   <Dialog
+		id="LocalDescargaDialog"
+		title="{view>/titulo}"
+		class="sapUiSmallMargin">
+   	
+   		<VBox id="vBoxLocal" class="sapUiSmallMargin sapUiSizeCompact">
+   			<f:SimpleForm id="formConta"
+				editable="true"
+				layout="ResponsiveGridLayout"
+				labelSpanXL="4"
+				labelSpanL="4"
+				labelSpanM="4"
+				labelSpanS="12"
+				adjustLabelSpan="false"
+				emptySpanXL="0"
+				emptySpanL="0"
+				emptySpanM="0"
+				emptySpanS="0"
+				columnsXL="3"
+				columnsL="2"
+				columnsM="2"
+				singleContainerFullSize="true">
+				<f:content>	
+					<Label text="Descrição" labelFor="descricao"/>
+					<Input value="{model>/Descricao}" id="descricao" required="true"/>
+					
+					<Label text="Informações - Nota Fiscal" labelFor="infonota"/>
+					<TextArea value="{model>/InformacoesNotaFiscal}" id="infonota" required="true" rows="6" cols="54"/>
+					
+					<Label text="Observações" labelFor="obs"/>
+					<TextArea value="{model>/Observacoes}" id="obs" required="true" rows="6" cols="54"/>
+				</f:content>
+			</f:SimpleForm>
+		</VBox>
+   		
+   		<buttons>
+   			<Button text="Salvar" press="onSaveDialog"/>
+   			<Button text="Fechar" press="onCloseDialog"/>
+   		</buttons>
+   </Dialog>
+</core:FragmentDefinition>
