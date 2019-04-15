@@ -5,9 +5,9 @@
    <Dialog
 		id="LocalDescargaDialog"
 		title="{view>/titulo}"
-		class="sapUiSmallMargin">
+		class="sapUiSmallMargin sapUiSizeCompact">
    	
-   		<VBox id="vBoxLocal" class="sapUiSmallMargin sapUiSizeCompact">
+   		<VBox id="vBoxLocal" class="sapUiSmallMargin">
    			<f:SimpleForm id="formConta"
 				editable="true"
 				layout="ResponsiveGridLayout"
@@ -29,17 +29,17 @@
 					<Input value="{model>/Descricao}" id="descricao" required="true"/>
 					
 					<Label text="Informações - Nota Fiscal" labelFor="infonota"/>
-					<TextArea value="{model>/InformacoesNotaFiscal}" id="infonota" required="true" rows="6" cols="54"/>
+					<TextArea value="{model>/InformacoesNotaFiscal}" id="infonota" required="true" rows="6"/>
 					
 					<Label text="Observações" labelFor="obs"/>
-					<TextArea value="{model>/Observacoes}" id="obs" required="true" rows="6" cols="54"/>
+					<TextArea value="{model>/Observacoes}" id="obs" required="true" rows="6"/>
 				</f:content>
 			</f:SimpleForm>
 		</VBox>
    		
    		<buttons>
-   			<Button text="Salvar" press="onSaveDialog"/>
-   			<Button text="Fechar" press="onCloseDialog"/>
+   			<Button text="Salvar" press="onSaveDialog" type="Accept"/>
+   			<Button text="Fechar" press="onCloseDialog" type="Reject"/>
    		</buttons>
    </Dialog>
 </core:FragmentDefinition>
